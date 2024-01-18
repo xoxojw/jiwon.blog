@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  /* background-color: #232222; */
+}
+
+@layer utilities {
+  .header {
+    @apply flex justify-between items-center sm:px-16 px-8 py-3 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+  }
+
+  .blue-gradient_text {
+    @apply bg-gradient-to-r from-[#6E89CF] to-[#dadada] bg-clip-text text-transparent;
+  }
+}
