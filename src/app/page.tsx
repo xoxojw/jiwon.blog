@@ -6,7 +6,7 @@ import PostList from "@/components/PostList";
 
 export default function Home() {
   return (
-    <article className="flex flex-col gap-16">
+    <>
       <div className="animate-in flex items-center gap-4">
         <Image src={MyProfile} alt="프로필 이미지" priority width={120} className="rounded-full" />
         <div className="flex flex-col gap-2">
@@ -24,23 +24,27 @@ export default function Home() {
           </p>
           <div className="animate-in flex gap-2 items-center">
             <Link href="mailto:xoxojw.dev@gmail.com">
-            <RiMailFill
-              className="animate-in w-5 h-5"
-              style={{ "--index": 3 } as React.CSSProperties} />
+              <RiMailFill
+                className="animate-in"
+                size={22}
+                style={{ "--index": 3 } as React.CSSProperties} />
             </Link>
             <Link href="https://github.com/xoxojw" target="blank">
-            <RiGithubFill
-              className="animate-in w-6 h-6"
-              style={{ "--index": 4 } as React.CSSProperties} />
+              <RiGithubFill
+                className="animate-in"
+                size={25}
+                style={{ "--index": 4 } as React.CSSProperties} />
             </Link>
             <Link href="https://xoxojw.notion.site/What-I-Learned-b63ba9e925554f168ef4cc9c387b737d?pvs=4" target="blank">
-            <RiNotionFill className="animate-in w-6 h-6"
-              style={{ "--index": 5 } as React.CSSProperties} />
+              <RiNotionFill
+                className="animate-in"
+                size={25}
+                style={{ "--index": 5 } as React.CSSProperties} />
             </Link>
           </div>
         </div>
       </div>
       <PostList index={6} />
-    </article>
+    </>
   );
 }

@@ -28,8 +28,10 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navigation />
-          <main className="w-screen min-h-[50rem] max-w-4xl mx-auto py-5">
-            {children}
+          <main className="w-screen min-h-[50rem] max-w-4xl mx-auto py-5 px-8">
+            <article className="flex flex-col gap-16">
+              {children}
+            </article>
           </main>
         </ThemeProvider>
       </body>
