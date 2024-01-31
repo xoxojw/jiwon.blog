@@ -1,15 +1,11 @@
 "use client";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { NAV_LISTS } from "@/src/constants";
 
-import { NAV_LISTS } from "@/constants";
-
-import { cls } from "@/libs/util";
+import NavLink from "./ui/NavLink";
 import DarkModeButton from "./DarkModeButton";
 
 const Navigation = () => {
-  const pathname = `/${usePathname().split("/")[1]}`;
-
   return (
     <header
       className="relative md:sticky top-0 z-20 w-screen h-20 backdrop-blur-sm"
@@ -19,12 +15,9 @@ const Navigation = () => {
           <div className="flex items-center gap-5">
             {NAV_LISTS.map(({ name, href }) => (
               <li key={name}>
-                <Link
-                  href={href}
-                  className={cls("pb-1", pathname === href ? "text-primary font-semibold" : "")}
-                >
+                <NavLink href={href}>
                   {name}
-                </Link>
+                </NavLink>
               </li>
             ))}
             </div>
