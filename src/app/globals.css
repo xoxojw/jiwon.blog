@@ -11,6 +11,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .dark {
+    background-color: #232427;
+  }
 }
 
 @layer utilities {

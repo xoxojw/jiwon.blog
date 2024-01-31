@@ -1,19 +1,10 @@
 interface NavLists {
-  name: "home" | "blog" | "about";
-  href: "/" | "/blog" | "/about";
+  name: string;
+  href: string;
 }
 
 export const NAV_LISTS: NavLists[] = [
-  {
-    name: "home",
-    href: "/"
-  },
-  {
-    name: "blog",
-    href: "/blog",
-  },
-  {
-    name: "about",
-    href: "/about",
-  },
+  { name: "home", href: "/" },
+  { name: "blog", href: "/blog", },
+  { name: "about", href: "/about", },
 ] as const;

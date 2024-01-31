@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <ThemeProvider defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navigation />
           <main className="w-screen min-h-[50rem] max-w-4xl mx-auto py-5">
             {children}

@@ -1,30 +1,35 @@
 "use client";
-
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 
 import { NAV_LISTS } from "@/constants";
 
-import { HiOutlineMoon } from "react-icons/hi";
+import { cls } from "@/libs/util";
+import DarkModeButton from "./DarkModeButton";
 
 const Navigation = () => {
+  const pathname = `/${usePathname().split("/")[1]}`;
+
   return (
-    <header className="relative md:sticky top-0 z-20 w-screen h-20">
-      <nav className="max-w-4xl mx-auto flex justify-end items-center gap-3 py-1">
-        <ul className="flex font-normal items-center">
-          {NAV_LISTS.map(({ name, href }) => (
-            <li
-              key={name}
-              className="mx-4 my-5 border-b-4 border-transparent hover:border-blue-500 transition duration-400 border-primary"
-            >
-              <Link href={href}>{name}</Link>
-            </li>
-          ))}
-          <li className="mx-4 my-5 hover:text-blue-500 transition duration-400">
-            <button>
-              <HiOutlineMoon />
-            </button>
+    <header
+      className="relative md:sticky top-0 z-20 w-screen h-20 backdrop-blur-sm"
+    >
+      <nav className="max-w-4xl mx-auto flex items-center gap-3 py-6">
+        <ul className="w-full flex items-center justify-between">
+          <div className="flex items-center gap-5">
+            {NAV_LISTS.map(({ name, href }) => (
+              <li key={name}>
+                <Link
+                  href={href}
+                  className={cls("pb-1", pathname === href ? "text-primary font-semibold" : "")}
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
+            </div>
+          <li className="hover:text-primary transition duration-400">
+            <DarkModeButton />
           </li>
         </ul>
       </nav>

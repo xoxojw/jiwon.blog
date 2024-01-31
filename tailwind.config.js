@@ -10,16 +10,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gray: {
-          200: "#D5DAE1"
+        primary: {
+          DEFAULT: "#6E89D0",
         },
-        black: {
-          DEFAULT: "#000",
-          500: "#1D2235"
-        },
-        blue: {
-          500: "#2B77E7"
-        }
       },
       keyframes: {
         in: {
