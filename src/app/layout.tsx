@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import "@/styles/globals.css";
-import NavBar from "@/components/NavBar";
+import "./globals.css";
+import Navigation from "@/components/Navigation";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Jiwon Log",
   description: "안녕하세요, 프론트엔드 개발자 박지원입니다.",
   icons: {
-    icon: "/icons/favicon.ico"
+    icon: "/logo/favicon.ico"
   },
   openGraph: {
     title: "Jiwon log",
@@ -25,8 +26,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <NavBar />
-        {children}
+        <ThemeProvider defaultTheme="system" enableSystem>
+          <Navigation />
+          <main className="w-screen min-h-[50rem] max-w-4xl mx-auto py-5">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   )

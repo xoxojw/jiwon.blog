@@ -1,9 +1,13 @@
 interface NavLists {
-  name: "blog" | "about";
-  href: "/blog" | "/about";
+  name: "home" | "blog" | "about";
+  href: "/" | "/blog" | "/about";
 }
 
 export const NAV_LISTS: NavLists[] = [
+  {
+    name: "home",
+    href: "/"
+  },
   {
     name: "blog",
     href: "/blog",
