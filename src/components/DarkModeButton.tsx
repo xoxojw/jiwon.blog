@@ -11,6 +11,7 @@ const DarkModeButton = () => {
   useEffect(() => setMounted(true), []);
 
   return (
+    mounted &&
     <button onClick={() => {setTheme(currentTheme === "light" ? "dark" : "light")}}>
       {currentTheme === "light" ? <LuMoonStar size={20} /> : <LuSun size={20} />}
     </button>

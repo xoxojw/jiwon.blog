@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         primary: {
           DEFAULT: "#6E89D0",
+          300: "#B3C2EA"
         },
       },
       keyframes: {

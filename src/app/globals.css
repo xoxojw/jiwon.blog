@@ -10,10 +10,19 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @apply transition-colors duration-700;
+  }
+
+  ::selection {
+    background-color: #B3C2EA;
   }
 
   .dark {
     background-color: #232427;
+  }
+
+  .dark::selection {
+    background-color: #6E89D0;
   }
 }
 
