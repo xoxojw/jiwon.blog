@@ -8,7 +8,7 @@ import DarkModeButton from "./DarkModeButton";
 const Navigation = () => {
   return (
     <header
-      className="relative md:sticky top-0 z-20 w-screen h-20 bg-inherit"
+      className="sticky top-0 z-20 w-screen h-20 bg-inherit"
     >
       <nav className="max-w-4xl mx-auto flex items-center gap-3 p-8">
         <ul className="w-full flex items-center justify-between">
