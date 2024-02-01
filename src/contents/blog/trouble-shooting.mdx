@@ -25,13 +25,12 @@ tags: ["troubleshooting", "tag2", "tag3", "tag4"]
 
 공무원인 근로자는 법률이 정하는 자에 한하여 단결권·단체교섭권 및 단체행동권을 가진다. 정당의 목적이나 활동이 민주적 기본질서에 위배될 때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고, 정당은 헌법재판소의 심판에 의하여 해산된다. 예비비는 총액으로 국회의 의결을 얻어야 한다. 예비비의 지출은 차기국회의 승인을 얻어야 한다.
 
-```tsx showLineNumbers
+```tsx showLineNumbers{1}
 export default const CityCard = ({item}) => {
   return (
     <div
-      className={`flex justify-between rounded-3xl bg-gradient-to-br text-white p-4 lg:px-8
-      ${item.color}
-    `}>
+      className={`flex justify-between rounded-3xl bg-gradient-to-br text-white p-4 lg:px-8 ${item.color}`
+    }>
       <div>
         <p className="text-xl font-bold">{item.city}</p>
         <p className="text-sm font-medium mb-5 opacity-75">{item.time}</p>

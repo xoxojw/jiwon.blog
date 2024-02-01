@@ -12,15 +12,6 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  *,
-  ::before,
-  ::after {
-    @apply bg-light-bgColor;
-
-    @apply dark:bg-dark-bgColor;
-    @apply dark:border-gray-600;
-  }
-
   a:hover, Link:hover {
     @apply text-secondary
   }
@@ -40,4 +31,57 @@
 
 .animate-in {
   animation-delay: calc(var(--index) * 130ms);
+}
+
+/* pretty-code (shiki) recommend */
+.prose pre > code {
+  display: block;
+}
+
+/* Fenced Code block - display change on theme switching*/
+.light .prose pre[data-theme='dark'],
+.light .prose code[data-theme='dark'],
+.dark .prose pre[data-theme='light'],
+.dark .prose code[data-theme='light'],
+.light .prose div[data-rehype-pretty-code-title][data-theme='dark'],
+.dark .prose div[data-rehype-pretty-code-title][data-theme='light'] {
+  display: none;
+}
+
+/* Fenced Code block - line number style */
+.prose code {
+  counter-reset: line;
+}
+ 
+.prose code[data-line-numbers] > span.line::before {
+  counter-increment: line;
+  content: counter(line);
+ 
+  /* Other Styling */
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+  font-size: 11px;
+}
+
+.prose code[data-line-numbers-max-digits='2'] > span.line::before {
+  width: 1rem;
+}
+
+.prose code[data-line-numbers-max-digits='3'] > span.line::before {
+  width: 2rem;
+}
+
+
+/* Inline code block backtick display: none */
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  display: none;
+}
+
+/* inline code block style */
+.prose :not(pre) > code {
+  @apply bg-white text-red-500 border border-gray-200 dark:bg-zinc-700 dark:text-red-400 dark:border-0 font-mono text-sm font-normal align-middle py-0.5 px-1.5 rounded mx-0.5;
 }
