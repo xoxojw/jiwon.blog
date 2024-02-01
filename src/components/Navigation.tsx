@@ -21,7 +21,7 @@ const Navigation = () => {
               </li>
             ))}
             </div>
-          <li className="hover:text-primary transition duration-400 flex">
+          <li className="hover:text-primary dark:hover:text-secondary transition duration-400 flex">
             <DarkModeButton />
           </li>
         </ul>

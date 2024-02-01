@@ -16,14 +16,25 @@
   ::before,
   ::after {
     @apply bg-light-bgColor;
+
     @apply dark:bg-dark-bgColor;
     @apply dark:border-gray-600;
+  }
+
+  a:hover, Link:hover {
+    @apply text-secondary
   }
 }
 
 @layer utilities {
-  .blue-gradient_text {
-    @apply bg-gradient-to-r from-[#6E89CF] to-[#dadada] bg-clip-text text-transparent;
+  /* light mode */
+  ::selection {
+    @apply bg-secondary-300;
+  }
+
+  /* dark mode */
+  .dark ::selection {
+    @apply bg-primary;
   }
 }
 
