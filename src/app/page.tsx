@@ -1,10 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
+import { allPosts } from ".contentlayer/generated";
+import { compareDesc } from "date-fns";
+
 import MyProfile from "../../public/my_profile.png";
 import { RiMailFill, RiGithubFill, RiNotionFill } from "react-icons/ri";
-import PostList from "@/components/PostList";
+import PostList from "@/src/components/PostList";
 
-export default function Home() {
+export default async function Home() {
+  const posts = allPosts
+    .sort(
+      (a, b) =>
+        compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)),
+    )
+    // 5 most recent
+    .filter((_, i) => i < 5);
+  console.log(posts);
   return (
     <>
       <div className="animate-in flex items-center gap-4">
@@ -44,7 +55,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <PostList index={6} />
+      <PostList posts={posts} index={6} />
     </>
   );
 }

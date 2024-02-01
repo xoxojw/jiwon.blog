@@ -19,9 +19,19 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./*"],
+      "contentlayer/generated": ["./.contentlayer/generated"],
+      "contentlayer/generated/*": ["./.contentlayer/generated/*"]
+    },
+    "baseUrl": ".",
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js"],
+  "include": [
+    "next-env.d.ts", 
+    "**/*.ts", 
+    "**/*.tsx", 
+    ".next/types/**/*.ts", 
+    "tailwind.config.js",
+    ".contentlayer/generated",
+  ],
   "exclude": ["node_modules"]
 }

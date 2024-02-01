@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import Navigation from "@/src/components/Navigation";
+import { ThemeProvider } from "@/src/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Jiwon Log",

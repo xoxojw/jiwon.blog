@@ -13,16 +13,8 @@
     /* @apply transition-colors duration-700; */
   }
 
-  ::selection {
-    background-color: #B3C2EA;
-  }
-
   .dark {
     background-color: #232427;
-  }
-
-  .dark::selection {
-    background-color: #6E89D0;
   }
 }
 
