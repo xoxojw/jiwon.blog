@@ -4,7 +4,7 @@ import { allPosts } from ".contentlayer/generated";
 import { compareDesc } from "date-fns";
 
 import MyProfile from "../../public/my_profile.png";
-import { RiMailFill, RiGithubFill, RiNotionFill } from "react-icons/ri";
+import { RiMailFill, RiGithubFill } from "react-icons/ri";
 import PostList from "@/src/components/PostList";
 
 export default async function Home() {
@@ -15,7 +15,7 @@ export default async function Home() {
     )
     // 5 most recent
     .filter((_, i) => i < 5);
-  console.log(posts);
+
   return (
     <>
       <div className="animate-in flex items-center gap-4">
@@ -33,7 +33,7 @@ export default async function Home() {
             안녕하세요, 프론트엔드 개발자 박지원입니다. <br />
             기록과 공유의 즐거움을 느끼며 제가 성장하는 매 걸음의 작은 여정들을 남깁니다.
           </p>
-          <div className="animate-in flex gap-2 items-center">
+          <div className="animate-in flex gap-2 items-center ml-1">
             <Link href="mailto:xoxojw.dev@gmail.com">
               <RiMailFill
                 className="animate-in"
@@ -45,12 +45,6 @@ export default async function Home() {
                 className="animate-in"
                 size={25}
                 style={{ "--index": 4 } as React.CSSProperties} />
-            </Link>
-            <Link href="https://xoxojw.notion.site/What-I-Learned-b63ba9e925554f168ef4cc9c387b737d?pvs=4" target="blank">
-              <RiNotionFill
-                className="animate-in"
-                size={25}
-                style={{ "--index": 5 } as React.CSSProperties} />
             </Link>
           </div>
         </div>

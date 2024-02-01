@@ -14,6 +14,16 @@ module.exports = {
           DEFAULT: "#6E89D0",
           300: "#B3C2EA"
         },
+        secondary: {
+          DEFAULT: "#F9BF8b",
+          300: "#FCD9BB",
+        },
+        light: {
+          bgColor: "#FFF",
+        },
+        dark: {
+          bgColor: "#232427",
+        }
       },
       keyframes: {
         in: {
@@ -32,5 +42,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography"),],
 }

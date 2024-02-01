@@ -1,0 +1,68 @@
+---
+title: 트러블슈팅
+publishedAt: 2023-10-14
+summary: 에러를 파악하고 해결한 과정을 소개합니다.
+tags: ["troubleshooting"]
+---
+
+<Image
+ src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+ alt="맥북"
+ width={1000}
+ height={500}
+/>
+ 
+<Image
+ src="/blog/logo-js.jpg"
+ alt="자바스크립트"
+ width={500}
+ height={500}
+ />
+
+## Hello World!!
+
+국무총리는 국회의 동의를 얻어 `대통령`이 임명한다. 국회의원과 정부는 법률안을 제출할 수 있다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 법률이 헌법에 위반되는 여부가 재판의 전제가 된 경우에는 법원은 헌법재판소에 제청하여 그 심판에 의하여 재판한다. 국무총리는 국무위원의 해임을 대통령에게 건의할 수 있다.
+
+공무원인 근로자는 법률이 정하는 자에 한하여 단결권·단체교섭권 및 단체행동권을 가진다. 정당의 목적이나 활동이 민주적 기본질서에 위배될 때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고, 정당은 헌법재판소의 심판에 의하여 해산된다. 예비비는 총액으로 국회의 의결을 얻어야 한다. 예비비의 지출은 차기국회의 승인을 얻어야 한다.
+
+```tsx showLineNumbers
+export default const CityCard = ({item}) => {
+  return (
+    <div
+      className={`flex justify-between rounded-3xl bg-gradient-to-br text-white p-4 lg:px-8
+      ${item.color}
+    `}>
+      <div>
+        <p className="text-xl font-bold">{item.city}</p>
+        <p className="text-sm font-medium mb-5 opacity-75">{item.time}</p>
+        <p className="text-sm font-medium mt-auto">{item.state}</p>
+      </div>
+      <div className="flex flex-col justify-between">
+        <p className="text-5xl">{item.temperature}°</p>
+        <p className="text-sm font-medium mt-auto opacity-75">
+          H:{item.temperature + 7}°
+          L:{item.temperature - 7}°
+        </p>
+      </div>
+    </div>
+  );
+};
+```
+
+## 주제입니다
+
+대통령은 헌법과 법률이 정하는 바에 의하여 공무원을 임면한다. 모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다. 국가는 모성의 보호를 위하여 노력하여야 한다. 모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.
+
+모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다. 대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 모든 국민은 종교의 자유를 가진다. 국가는 여자의 복지와 권익의 향상을 위하여 노력하여야 한다. 법률안에 이의가 있을 때에는 대통령은 제1항의 기간내에 이의서를 붙여 국회로 환부하고, 그 재의를 요구할 수 있다. 국회의 폐회중에도 또한 같다.
+
+대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다. 사법권은 법관으로 구성된 법원에 속한다. 대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다.
+
+## 한글 입숨으로 생성한 텍스트
+
+- li1 국가는 농업 및 어업을 보호·육성하기 위하여 농·어촌종합개발
+- li2 행정각부의 설치·조직과 직무범위는 법률로 정한다. 계엄을 선언
+- li3 헌법재판소 재판관은 탄핵 또는 금고 이상의 형의 선고에 의함
+  - li4 국군은 국가의 안전보장과 국토방위의 신성한 의무를 수행함
+  - li5 선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원
+  - li6 대통령은 법률이 정하는 바에 의하여 훈장 기타의 영전을 수여
+  - li7 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원

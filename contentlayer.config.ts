@@ -16,6 +16,10 @@ const postComputedFields: ComputedFields = {
     type: "string",
     resolve: (post) => post._raw.flattenedPath
   },
+  image: {
+    type: "string",
+    resolve: (doc) => `/blog/${getSlug(doc)}/image.png`,
+  },
 };
 
 export const Post = defineDocumentType(() => ({

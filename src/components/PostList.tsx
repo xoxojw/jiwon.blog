@@ -9,7 +9,7 @@ type PostListProps = {
   posts: PostType[];
 }
 
-// "/"에서는 최근 글 5개, "/blog"에서는 전체 글을 보여줌
+// "/"에서는 최근 글 5개, "/blog"에서는 전체 글을 리스트업
 const PostList = ({ index, posts }: PostListProps) => {
   const pathname = `/${usePathname().split("/")[1]}`;
 
@@ -24,13 +24,15 @@ const PostList = ({ index, posts }: PostListProps) => {
         >
           {pathname === "/" ? "최근 글" : "전체 글"}
         </h2>
+
         {pathname === "/" ? (
           <Link href="/blog" className="underline underline-offset-4 hover">
             See All
           </Link>
         ) : (
-          <p>{posts.length} posts</p>
+          <p><span className="text-primary font-medium">{posts.length}</span> posts</p>
         )}
+
       </div>
       <ul
         className="animate-in flex flex-col gap-5"
