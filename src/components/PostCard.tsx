@@ -2,6 +2,7 @@ import type { Post as PostType } from ".contentlayer/generated";
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import PublishedDate from "./ui/PublishedDate";
+import Tags from "./Tags";
 
 type PostCardProps = {
   post: PostType;
@@ -13,13 +14,11 @@ const PostCard = ({ post, i }: PostCardProps) => {
   return (
       <li
         key={i}
-        className="animate-in flex flex-col pb-4 border-b border-inherit gap-2"
+        className="animate-in flex flex-col pb-4 border-b border-inherit gap-3"
         style={{ "--index": 3 + i } as React.CSSProperties}
       >
-        <p className="text-sm text-primary">{...tags}</p>
-        <Link href={url}>
-          <h3 className="text-2xl font-semibold">{title}</h3>
-        </Link>
+        <Tags tags={post.tags} />
+        <Link href={url}><h3 className="text-2xl font-semibold">{title}</h3></Link>
         <PublishedDate publishedAt={publishedAt} />
       </li>
   );
