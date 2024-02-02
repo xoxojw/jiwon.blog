@@ -2,7 +2,7 @@
 import { NAV_LISTS } from "@/src/constants";
 
 import NavLink from "./ui/NavLink";
-import DarkModeButton from "./DarkModeButton";
+import DarkModeButton from "./ui/DarkModeButton";
 import { usePathname } from "next/navigation";
 import ProgressBar from "../app/blog/components/ProgressBar";
 
