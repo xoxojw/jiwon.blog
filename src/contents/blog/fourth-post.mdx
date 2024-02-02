@@ -1,0 +1,153 @@
+---
+title: 네 번째 게시글
+publishedAt: 2024-01-01
+summary: 테스트 게시글 입니다.
+tags: ["tag1", "tag2", "tag3"]
+---
+
+<Image
+ src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+ alt="맥북"
+ width={1000}
+ height={500}
+/>
+
+## Hello World!!
+
+**국무총리**는 국회의 동의를 얻어 `대통령`이 임명한다. 국회의원과 정부는 법률안을 제출할 수 있다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 법률이 헌법에 위반되는 여부가 재판의 전제가 된 경우에는 법원은 헌법재판소에 제청하여 그 심판에 의하여 재판한다. `국무총리`는 국무위원의 해임을 대통령에게 건의할 수 있다.
+
+[공무원](https://ko.dict.naver.com/#/entry/koko/80a1f2eb0d724ee6b32952dbad132d4e)인 근로자는 법률이 정하는 자에 한하여 `단결권`·`단체교섭권` 및 `단체행동권`을 가진다. 정당의 목적이나 활동이 민주적 기본질서에 위배될 때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고, 정당은 헌법재판소의 심판에 의하여 해산된다. 예비비는 총액으로 국회의 의결을 얻어야 한다. 예비비의 지출은 차기국회의 승인을 얻어야 한다.
+
+```tsx title="contentlayer.config.ts" showLineNumbers{1} {6-7,40-48}
+import {
+  defineDocumentType,
+  makeSource,
+  ComputedFields,
+} from "contentlayer/source-files"; // eslint-disable-line
+import rehypePrettyCode, { type Options as PrettyCodeOptions } from "rehype-pretty-code"
+//@ts-ignore
+
+const getSlug = (post: any) => post._raw.sourceFileName.replace(/\.mdx$/, "");
+
+const postComputedFields: ComputedFields = {
+  slug: {
+    type: "string",
+    resolve: (post) => getSlug(post),
+  },
+  url: {
+    type: "string",
+    resolve: (post) => post._raw.flattenedPath
+  },
+  image: {
+    type: "string",
+    resolve: (doc) => `/blog/${getSlug(doc)}/image.png`,
+  },
+};
+
+export const Post = defineDocumentType(() => ({
+  name: "Post",
+  contentType:"mdx",
+  filePathPattern: `blog/**/*.mdx`,
+  fields: {
+    title: { type: "string", required: true, },
+    publishedAt: { type: "date", required: true, },
+    summary: { type: "string", required: true },
+    tags: { type: "json", required: true },
+  },
+  computedFields: postComputedFields,
+}));
+
+const prettyCodeOptions: PrettyCodeOptions = {
+  theme: {
+    light: "material-theme-lighter",
+    dark: "material-theme-palenight",
+  },
+  onVisitHighlightedLine(node: any) {
+    node.properties.className.push("line-highlighted");
+  },
+  onVisitHighlightedWord(node: any) {
+    node.properties.className = ["word-highlighted"];
+  },
+  keepBackground: true,
+}
+
+export default makeSource({
+  contentDirPath: `src/contents`, // contentDirPath: mdx 파일 경로
+  documentTypes: [Post],
+  mdx: {
+    rehypePlugins: [[rehypePrettyCode, prettyCodeOptions]]
+  },
+});
+};
+```
+
+## 주제입니다
+
+```sh
+npm i shiki
+```
+
+```js
+const shiki = require('shiki')
+
+shiki
+  .getHighlighter({
+    theme: 'nord'
+  })
+  .then(highlighter => {
+    console.log(highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' }))
+  })
+
+// <pre class="shiki" style="background-color: #2e3440"><code>
+//   <!-- Highlighted Code -->
+// </code></pre>
+```
+
+```js showLineNumbers{10}
+const shiki = require('shiki')
+
+shiki
+  .getHighlighter({
+    theme: 'nord'
+  })
+  .then(highlighter => {
+    console.log(highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' }))
+  })
+
+// <pre class="shiki" style="background-color: #2e3440"><code>
+//   <!-- Highlighted Code -->
+// </code></pre>
+```
+
+```html showLineNumbers{100}
+<script src="https://unpkg.com/shiki"></script>
+<script>
+  shiki
+    .getHighlighter({
+      theme: 'nord'
+    })
+    .then(highlighter => {
+      const code = highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' })
+      document.getElementById('output').innerHTML = code
+    })
+</script>
+```
+
+대통령은 헌법과 법률이 정하는 바에 의하여 공무원을 임면한다. 모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다. 국가는 모성의 보호를 위하여 노력하여야 한다. 모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 `최저임금제`를 시행하여야 한다.
+
+## 한글 입숨으로 생성한 텍스트
+
+<Image
+ src="/blog/logo-js.jpg"
+ alt="자바스크립트"
+ width={1000}
+ height={500}
+ />
+
+- 국가는 농업 및 어업을 보호·육성하기 위하여 농·어촌종합개발
+- 행정각부의 설치·조직과 직무범위는 법률로 정한다. 계엄을 선언
+- 헌법재판소 재판관은 탄핵 또는 금고 이상의 형의 선고에 의함
+  - 국군은 국가의 안전보장과 국토방위의 신성한 의무를 수행함
+  - 선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원
+  - 대통령은 법률이 정하는 바에 의하여 훈장 기타의 영전을 수여
+  - 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원

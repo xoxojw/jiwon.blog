@@ -32,8 +32,8 @@ const PostList = ({ index, posts }: PostListProps) => {
         ) : (
           <p><span className="text-primary font-medium">{posts.length}</span> posts</p>
         )}
-
       </div>
+      
       <ul
         className="animate-in flex flex-col gap-5"
         style={{ "--index": 2 } as React.CSSProperties}
