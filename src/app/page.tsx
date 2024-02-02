@@ -23,7 +23,7 @@ export default async function Home() {
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <h1
-              className="animate-in font-bold text-2xl"
+              className="animate-in font-bold text-3xl"
               style={{ "--index": 1 } as React.CSSProperties}>
               Jiwon Park
             </h1>
