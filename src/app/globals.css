@@ -51,8 +51,16 @@
   @apply font-bold text-2xl
 }
 
+.highlight-words span {
+  @apply bg-secondary-300 dark:bg-primary font-mono text-sm font-normal align-middle py-1 px-1.5 rounded mx-0.5;
+}
+
 .animate-in {
   animation-delay: calc(var(--index) * 130ms);
+}
+
+.prose p > a {
+  @apply text-primary dark:text-secondary
 }
 
 .prose pre {

@@ -1,25 +1,12 @@
-import React from "react";
-import Playlist from "./components/Playlist";
+import About from "./components/About";
 
 const AboutPage = () => {
   return (
     <>
-      <h1 className="heading-first">About Me</h1>
-      <section>
-        <h2 className="heading-second">박지원 Jiwon Park</h2>
-        <h3 className="text-lg text-gray">Junior Frontend developer</h3>
-        <Playlist />
-      </section>
-      <section>
-        <h2 className="heading-second">About</h2>
-        <h1>Jiwon Park</h1>
-        <h3 className="text-lg text-gray">Junior Frontend developer</h3>
-      </section>
-      <section>
-        <h2 className="heading-second">About</h2>
-        <h1>Jiwon Park</h1>
-        <h3 className="text-lg text-gray">Junior Frontend developer</h3>
-      </section>
+      <h1 className="animate-in heading-first">About Me</h1>
+      <div className="animate-in flex flex-col gap-20">
+        <About />
+      </div>
     </>
   )
 }

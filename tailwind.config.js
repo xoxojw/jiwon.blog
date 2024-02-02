@@ -19,6 +19,10 @@ module.exports = {
           300: "#FCD9BB",
         },
       },
+      dropShadow: {
+        "blue": "0 0 15px rgba(110, 137, 208, 1)",
+        "yellow": "0 0 15px rgba(249, 191, 139, 1)"
+      },
       keyframes: {
         in: {
           "0%": { transform: "translateY(18px)", opacity: 0 },
