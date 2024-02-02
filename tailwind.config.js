@@ -18,12 +18,6 @@ module.exports = {
           DEFAULT: "#F9BF8b",
           300: "#FCD9BB",
         },
-        light: {
-          bgColor: "#FFF",
-        },
-        dark: {
-          bgColor: "#232427",
-        }
       },
       keyframes: {
         in: {

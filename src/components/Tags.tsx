@@ -4,9 +4,9 @@ type TagsProps = {
 
 const Tags = ({ tags }: TagsProps) => {
   return (
-    <ul className="flex gap-2 text-sm">
+    <ul className="flex gap-3 text-xs">
       {tags.map((tag: string, i: number) => (
-        <li key={i} className="bg-gray-300/20 px-2 py-1 rounded-md select-none">{tag}</li>
+        <li key={i} className="text-gray-400 rounded-md select-none">{tag}</li>
       ))}
     </ul>
   );

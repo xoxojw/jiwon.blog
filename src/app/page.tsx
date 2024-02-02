@@ -13,8 +13,8 @@ export default async function Home() {
       (a, b) =>
         compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)),
     )
-    // 5 most recent
-    .filter((_, i) => i < 5);
+    // 4 most recent
+    .filter((_, i) => i < 3);
 
   return (
     <>

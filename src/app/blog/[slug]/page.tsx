@@ -21,7 +21,7 @@ const BlogPage = ({ params }: { params: { slug: string } }) => {
           <Tags tags={post.tags} />
         </div>
         <PublishedDate animateIndex={1} publishedAt={post.publishedAt} dateFormat="LLLL d, yyyy" />
-        <blockquote className="animate-in" style={{ "--index": 2 } as React.CSSProperties}>
+        <blockquote className="animate-in text-gray-700 dark:text-gray-400" style={{ "--index": 2 } as React.CSSProperties}>
           {post.summary}
         </blockquote>
       </div>
