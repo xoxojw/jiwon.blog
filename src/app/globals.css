@@ -45,6 +45,14 @@
   }
 }
 
+.heading-first {
+  @apply font-bold text-3xl
+}
+
+.heading-second {
+  @apply font-bold text-2xl
+}
+
 .animate-in {
   animation-delay: calc(var(--index) * 130ms);
 }

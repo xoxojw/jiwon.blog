@@ -19,7 +19,7 @@ const PostList = ({ index, posts }: PostListProps) => {
       style={{ "--index": index ? index : 0 } as React.CSSProperties}>
       <div className="flex items-center justify-between gap-3">
         <h2
-          className="animate-in font-bold text-2xl"
+          className="animate-in heading-second"
           style={{ "--index": 1 } as React.CSSProperties}
         >
           {pathname === "/" ? "최근 글" : "전체 글"}

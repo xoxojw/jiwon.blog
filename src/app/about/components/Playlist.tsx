@@ -16,7 +16,7 @@ const Playlist = () => {
 
   return (
     <div>
-      <h2 className="font-bold text-2xl">My Playlist</h2>
+      <h2 className="heading-second">My Playlist</h2>
       <ul className="flex">
         {data.items.map((item: YouTubePlaylistItem) => {
           console.log(item);
