@@ -17,7 +17,13 @@ export default async function Home() {
     <>
       <section>
         <div className="animate-in flex md:flex-row flex-col md:items-center items-start gap-4 mb-8">
-          <Image src={MyProfile} alt="프로필 이미지" priority width={120} className="rounded-full" />
+          <Image
+            src={MyProfile}
+            alt="프로필 이미지"
+            priority
+            quality={100}
+            width={120}
+            className="rounded-full" />
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
               <h1 className="animate-in heading-second" style={{ "--index": 1 } as React.CSSProperties}>

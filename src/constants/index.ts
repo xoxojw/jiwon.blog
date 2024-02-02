@@ -1,6 +1,6 @@
 interface NavLists {
-  name: string;
-  href: string;
+  name: "home" | "posts" | "about";
+  href: "/" | "/posts" | "/about";
 }
 
 export const NAV_LISTS: NavLists[] = [

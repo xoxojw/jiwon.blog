@@ -6,7 +6,7 @@ const About = () => {
   return (
     <Section index={1} sectionTitle="박지원 Jiwon Park" sectionSubTitle="Frontend Developer">
       <Contact index={2} />
-      <div className="animate-in flex flex-col gap-6 leading-7" style={{ "--index": 5 } as React.CSSProperties}>
+      <div className="animate-in flex flex-col gap-6 leading-7 md:leading-9 md:text-base text-sm" style={{ "--index": 5 } as React.CSSProperties}>
         <ul>
           <li>넓은 세상에서 다양하고 새로운 것을 배우는 데 두려움이 없고,</li>
           <li>직면한 문제를 깊게 파고들어 해결하는 것을 즐기며,</li>
