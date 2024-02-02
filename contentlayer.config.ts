@@ -19,14 +19,14 @@ const postComputedFields: ComputedFields = {
   },
   image: {
     type: "string",
-    resolve: (doc) => `/blog/${getSlug(doc)}/image.png`,
+    resolve: (doc) => `/posts/${getSlug(doc)}/image.png`,
   },
 };
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
   contentType:"mdx",
-  filePathPattern: `blog/**/*.mdx`,
+  filePathPattern: `posts/**/*.mdx`,
   fields: {
     title: { type: "string", required: true, },
     publishedAt: { type: "date", required: true, },

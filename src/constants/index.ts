@@ -5,7 +5,7 @@ interface NavLists {
 
 export const NAV_LISTS: NavLists[] = [
   { name: "home", href: "/" },
-  { name: "blog", href: "/blog", },
+  { name: "posts", href: "/posts", },
   { name: "about", href: "/about", },
 ] as const;
 

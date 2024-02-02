@@ -19,7 +19,7 @@ const PostList = ({ index, posts }: PostListProps) => {
         <div className="animate-in heading-first" style={{ "--index": 1 } as React.CSSProperties}>
           {pathname === "/" ?
             <h2 className="heading-second">Latest Posts</h2>
-            : <h1>Blog</h1>}
+            : <h1>Posts</h1>}
         </div>
 
         {pathname === "/" ? (
