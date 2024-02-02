@@ -7,10 +7,10 @@ const Contact = ({ index }: { index: number }) => {
       {contactLists.map((item, i) => (
         <li
           key={item.label}
-          className="animate-in border rounded-md px-4 py-3 hover:-translate-y-1 transition ease-in-out"
+          className="animate-in border rounded-md px-4 py-3"
           style={{ "--index": index + i } as React.CSSProperties}
         >
-          <Link href={item.href} target="blank" className="flex items-center gap-2 hover:text-current">
+          <Link href={item.href} target="blank" className="flex items-center gap-2 hover:translate-x-1 transition ease-in-out">
             <span>{item.icon}</span>
             <p>{item.label}</p>
           </Link>

@@ -24,7 +24,7 @@
   }
 
   a:hover, Link:hover {
-    @apply text-secondary
+    @apply text-primary transition ease-in-out
   }
 }
 
@@ -136,4 +136,8 @@
 /* Inline code block style */
 .prose :not(pre) > code {
   @apply bg-white text-red-500 border border-gray-200 dark:bg-zinc-700 dark:text-red-400 dark:border-0 font-mono text-sm font-normal align-middle py-0.5 px-1.5 rounded mx-0.5;
+}
+
+#comments {
+  @apply mt-8 md:mt-16
 }

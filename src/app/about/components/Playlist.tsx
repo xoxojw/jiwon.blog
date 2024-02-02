@@ -48,7 +48,7 @@ const Playlist = ({ index }: { index: number; }) => {
 
   return (
     <section
-      className="animate-in w-full py-8 flex flex-col gap-8"
+      className="animate-in w-full py-4 flex flex-col gap-8"
       style={{ "--index": index } as React.CSSProperties}>
       <h3 className="w-4/5 text-lg font-semibold font-mono text-end">My Playlist ♪</h3>
       <div className="w-full flex flex-col gap-2 items-center hover:drop-shadow-yellow dark:hover:drop-shadow-blue transition ease-out">
