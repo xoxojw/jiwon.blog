@@ -49,6 +49,10 @@
   animation-delay: calc(var(--index) * 130ms);
 }
 
+#comments {
+  margin-bottom: 5rem;
+}
+
 .prose pre {
   @apply border border-gray-200 dark:border-gray-700 py-4 px-0;
 }
