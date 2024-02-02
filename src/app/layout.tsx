@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "@/src/components/Navigation";
 import { ThemeProvider } from "@/src/components/ThemeProvider";
 import SWRProvider from "./SWRProvider";
+
+import Navigation from "@/src/components/Navigation";
+import Footer from "@/src/components/Footer";
 
 export const metadata: Metadata = {
   title: "Jiwon Log",
@@ -22,13 +24,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <body>
+      <body className="antialiased">
         <SWRProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navigation />
-            <main className="w-screen min-h-[50rem] max-w-4xl mx-auto py-5 px-8">
-              <article className="flex flex-col gap-16">{children}</article>
-            </main>
+            <div className="w-screen flex flex-col justify-between">
+              <main className="w-screen max-w-4xl mx-auto py-5 px-8 min-h-[calc(100vh-5rem-7rem)] md:min-h-[calc(100vh-5rem-9rem)]">
+                <article className="flex flex-col gap-8">{children}</article>
+              </main>
+              <Footer />
+            </div>
           </ThemeProvider>
         </SWRProvider>
       </body>

@@ -15,9 +15,9 @@ const Playlist = () => {
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <div>
+    <div className="flex flex-col">
       <h2 className="heading-second">My Playlist</h2>
-      <ul className="flex">
+      <ul className="grid grid-cols-3">
         {data.items.map((item: YouTubePlaylistItem) => {
           console.log(item);
           const { id, snippet } = item;
