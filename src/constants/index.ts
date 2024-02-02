@@ -8,3 +8,5 @@ export const NAV_LISTS: NavLists[] = [
   { name: "blog", href: "/blog", },
   { name: "about", href: "/about", },
 ] as const;
+
+export const playlistId = "PLvtUcr-iolHajTv-6vIDR-xhu3gWjR2mL";

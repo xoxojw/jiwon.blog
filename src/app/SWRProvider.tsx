@@ -3,9 +3,9 @@ import { SWRConfig } from "swr";
 
 const SWRProvider = ({ children }: { children: React.ReactNode; }) => {
   return (
-    <SWRConfig value={{
-      fetcher: (url: string) => fetch(url).then(res => res.json())
-    }}>
+    <SWRConfig
+      value={{ fetcher: (url: string) => fetch(url).then(res => res.json()) }}
+    >
       {children}
     </SWRConfig>
   )
