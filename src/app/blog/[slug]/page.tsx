@@ -16,7 +16,7 @@ const BlogPage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <section className="flex flex-col gap-8 mb-8">
+      <section className="flex flex-col gap-8">
         <div className="animate-in flex flex-col gap-4 border-b pb-8">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-0">
             <h1 className="font-bold text-3xl">{post.title}</h1>
