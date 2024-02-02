@@ -6,20 +6,6 @@ import {
 import rehypePrettyCode, { type Options as PrettyCodeOptions } from "rehype-pretty-code"
 //@ts-ignore
 
-const prettyCodeOptions: PrettyCodeOptions = {
-  theme: {
-    light: "material-theme-lighter",
-    dark: "catppuccin-frappe",
-  },
-  onVisitHighlightedLine(node: any) {
-    node.properties.className.push("line-highlighted");
-  },
-  onVisitHighlightedWord(node: any) {
-    node.properties.className = ["word-highlighted"];
-  },
-  keepBackground: true,
-}
-
 const getSlug = (post: any) => post._raw.sourceFileName.replace(/\.mdx$/, "");
 
 const postComputedFields: ComputedFields = {
@@ -49,6 +35,20 @@ export const Post = defineDocumentType(() => ({
   },
   computedFields: postComputedFields,
 }));
+
+const prettyCodeOptions: PrettyCodeOptions = {
+  theme: {
+    light: "material-theme-lighter",
+    dark: "material-theme-palenight",
+  },
+  onVisitHighlightedLine(node: any) {
+    node.properties.className.push("line-highlighted");
+  },
+  onVisitHighlightedWord(node: any) {
+    node.properties.className = ["word-highlighted"];
+  },
+  keepBackground: true,
+}
 
 export default makeSource({
   contentDirPath: `src/contents`, // contentDirPath: mdx 파일 경로

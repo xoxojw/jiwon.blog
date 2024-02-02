@@ -5,7 +5,7 @@ type CustomImageProps = {
   src: string;
   alt: string;
   width: number;
-  height?: number;
+  height: number;
   caption?: string;
 }
 
@@ -17,7 +17,11 @@ const CustomImage = ({ src, alt, width, height, caption }: CustomImageProps) => 
   return (
     <figure>
       <Image
-        src={src} width={width} height={height} alt={alt} priority
+        src={src}
+        width={width}
+        height={height}
+        alt={alt}
+        priority
         className="rounded-lg"
       />
       {caption && <figcaption>{caption}</figcaption>}
