@@ -4,7 +4,7 @@ import Contact from "./Contact";
 
 const About = () => {
   return (
-    <Section index={1} sectionTitle="박지원 Jiwon Park" sectionSubTitle="Junior frontend developer">
+    <Section index={1} sectionTitle="박지원 Jiwon Park" sectionSubTitle="Frontend Developer">
       <Contact index={2} />
       <div className="animate-in flex flex-col gap-6 leading-7" style={{ "--index": 5 } as React.CSSProperties}>
         <ul>
