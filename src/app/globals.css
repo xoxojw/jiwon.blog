@@ -59,6 +59,10 @@
   animation-delay: calc(var(--index) * 130ms);
 }
 
+.prose {
+  @apply text-sm leading-6 md:text-base md:leading-7
+}
+
 .prose p > a {
   @apply text-primary dark:text-secondary
 }

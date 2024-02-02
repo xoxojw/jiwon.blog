@@ -52,7 +52,7 @@ const Playlist = ({ index }: { index: number; }) => {
       style={{ "--index": index } as React.CSSProperties}>
       <h3 className="w-4/5 text-lg font-semibold font-mono text-end">My Playlist ♪</h3>
       <div className="w-full flex flex-col gap-2 items-center hover:drop-shadow-yellow dark:hover:drop-shadow-blue transition ease-out">
-        <motion.ul className="flex w-full h-96 items-center justify-center">
+        <motion.ul className="flex w-full items-center justify-center">
           <AnimatePresence>
             <motion.li
               variants={rowVariants}
