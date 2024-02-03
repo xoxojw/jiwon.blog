@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import useSWR from "swr";
 
-import { playlistId } from "@/src/constants";
+import { playlistId } from "@/src/app/api/youtube/route";
 
 import { motion, AnimatePresence } from "framer-motion";
 

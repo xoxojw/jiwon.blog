@@ -2,20 +2,19 @@
 import { notFound, usePathname } from "next/navigation";
 import Link from "next/link";
 import type { Post as PostType } from ".contentlayer/generated";
-import PostCard from "./PostCard";
 
-import { NAV_LISTS } from "../constants";
+import { NavLists } from "./Navigation";
+import PostCard from "./PostCard";
 
 type PostListProps = {
   index?: number;
   posts: PostType[];
 };
 
-// "/"에서는 최근 글 5개, "/blog"에서는 전체 글을 리스트업
 const PostList = ({ index, posts }: PostListProps) => {
   const pathname = `/${usePathname().split("/")[1]}`;
   
-  const navMap = new Map(NAV_LISTS.map(item => [item.name, item.href]));
+  const navMap = new Map(NavLists.map(item => [item.name, item.href]));
   const homeHref = navMap.has("home") ? navMap.get("home") : "/";
   const postsHref = navMap.has("posts") ? navMap.get("posts") : "/posts";
 

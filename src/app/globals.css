@@ -44,11 +44,11 @@
 }
 
 .heading-first {
-  @apply font-bold md:text-3xl text-2xl
+  @apply font-bold md:text-3xl text-xl
 }
 
 .heading-second {
-  @apply font-bold md:text-2xl text-xl
+  @apply font-bold md:text-2xl text-lg
 }
 
 .highlight-words span {
@@ -60,7 +60,7 @@
 }
 
 .prose {
-  @apply text-sm leading-6 md:text-base md:leading-7
+  @apply text-sm leading-7 md:text-base md:leading-8
 }
 
 .prose p > a {
@@ -71,9 +71,9 @@
   @apply border border-gray-200 dark:border-gray-700 py-4 px-0;
 }
 
-/* pretty-code (shiki) recommend */
+/* pretty-code (shiki) recommend display: grid */
 .prose pre > code {
-  @apply grid text-xs leading-5
+  @apply grid text-sm
 }
 
 /* Fenced Code block - line style */
@@ -139,7 +139,7 @@
 
 /* Inline code block style */
 .prose :not(pre) > code {
-  @apply bg-white text-red-500 border border-gray-200 dark:bg-zinc-700 dark:text-red-400 dark:border-0 font-mono text-sm font-normal align-middle py-0.5 px-1.5 rounded mx-0.5;
+  @apply bg-white text-red-500 border border-gray-200 dark:bg-zinc-700 dark:text-red-400 dark:border-0 font-mono font-normal align-middle py-0.5 px-1.5 rounded mx-0.5 text-sm;
 }
 
 #comments {

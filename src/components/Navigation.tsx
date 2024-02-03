@@ -1,10 +1,19 @@
 "use client";
-import { NAV_LISTS } from "@/src/constants";
-
 import NavLink from "./ui/NavLink";
 import DarkModeButton from "./ui/DarkModeButton";
 import { usePathname } from "next/navigation";
 import ProgressBar from "../app/posts/components/ProgressBar";
+
+type NavLists = {
+  name: "home" | "posts" | "about";
+  href: "/" | "/posts" | "/about";
+}
+
+export const NavLists: NavLists[] = [
+  { name: "home", href: "/" },
+  { name: "posts", href: "/posts", },
+  { name: "about", href: "/about", },
+] as const;
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -14,7 +23,7 @@ const Navigation = () => {
       <nav className="max-w-4xl mx-auto flex items-center gap-3 p-8">
         <ul className="w-full flex items-center justify-between">
           <div className="flex items-center gap-5">
-            {NAV_LISTS.map(({ name, href }) => (
+            {NavLists.map(({ name, href }) => (
               <li key={name}>
                 <NavLink pathname={pathname} href={href}>
                   {name}
