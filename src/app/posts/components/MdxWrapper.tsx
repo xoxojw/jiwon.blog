@@ -22,6 +22,7 @@ const CustomImage = ({ src, alt, width, height, caption }: CustomImageProps) => 
         height={height}
         alt={alt}
         priority
+        quality={100}
         className="rounded-lg"
       />
       {caption && <figcaption>{caption}</figcaption>}
