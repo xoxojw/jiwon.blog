@@ -7,6 +7,38 @@ import PublishedDate from "@/src/components/ui/PublishedDate";
 import Tags from "@/src/components/Tags";
 import Comments from "../components/Comments";
 
+type Props = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export const generateMetadata = async (
+  { params }: Props,
+  parent: ResolvingMetadata,
+): Promise<Metadata> => {
+  const post = allPosts.find((post) => post.slug === params.slug);
+
+  if (!post) {
+    throw new Error("Post not found");
+  }
+
+  const { title, summary: description, tags:keywords } = post;
+
+  const metadata: Metadata = {
+    title: `${title} | Jiwon Log`,
+    description,
+    keywords,
+    openGraph: {
+      title: `${title} | Jiwon Log`,
+      description,
+      type: "article",
+      url: `https://jiwon.blog/posts/${title}`,
+    },
+  };
+
+  return metadata;
+};
+
 const BlogPage = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post.slug === params.slug);
 

@@ -23,7 +23,10 @@ export const contactLists = [
 
 const Contact = ({ index }: { index: number }) => {
   return (
-    <ul className="animate-in flex-grow grid grid-cols-1 sm:grid-cols-4 gap-2">
+    <ul
+      className="animate-in flex-grow grid grid-cols-1 sm:grid-cols-4 gap-2"
+      style={{ "--index": index } as React.CSSProperties}
+    >
       {contactLists.map((item, i) => (
         <li
           key={item.label}

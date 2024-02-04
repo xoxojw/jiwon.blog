@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import Contact from "./components/Contact";
 import Playlist from "./components/Playlist";
 import Section from "./components/Section";
+
+export const metadata: Metadata = {
+  title: "About | Jiwon Log",
+  description: "저에 대해 소개합니다.",
+};
 
 const AboutPage = () => {
   return (

@@ -10,7 +10,7 @@ import PostList from "@/src/components/PostList";
 export default async function Home() {
   const posts = allPosts
     .sort((a, b) => compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)))
-    // 4 most recent
+    // 3 most recent
     .filter((_, i) => i < 3);
 
   return (

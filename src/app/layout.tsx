@@ -8,14 +8,14 @@ import Footer from "@/src/components/Footer";
 
 export const metadata: Metadata = {
   title: "Jiwon Log",
-  description: "안녕하세요, 프론트엔드 개발자 박지원입니다.",
+  description: "Small steps are still progress, 공부한 것을 기록하고 보관하기 위한 기술 블로그입니다.",
   icons: {
     icon: "/logo/favicon.ico",
   },
   openGraph: {
     title: "Jiwon log",
-    description: "안녕하세요, 프론트엔드 개발자 박지원입니다.",
-    // url: "jiwon.blog",
+    description: "Small steps are still progress, 공부한 것을 기록하고 보관하기 위한 기술 블로그입니다.",
+    url: "https://jiwon.blog",
     locale: "ko-KR",
     type: "website",
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <body className="antialiased">
         <SWRProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
