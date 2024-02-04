@@ -1,5 +1,4 @@
-export const playlistId = "PLvtUcr-iolHajTv-6vIDR-xhu3gWjR2mL"
-  const URL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=50&key=${process.env.GOOGLE_API_KEY}`;
+const URL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.YOUTUBE_PLAYLIST_ID}&maxResults=50&key=${process.env.GOOGLE_API_KEY}`;
 
 export const GET = async () => {
     if (!process.env.GOOGLE_API_KEY) {

@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import useSWR from "swr";
 
-import { playlistId } from "@/src/app/api/youtube/route";
-
 import { motion, AnimatePresence } from "framer-motion";
 
 const rowVariants = {
@@ -67,7 +65,7 @@ const Playlist = ({ index }: { index: number; }) => {
             >
               <Link
                 key={id}
-                href={`https://www.youtube.com/playlist?list=${playlistId}`}
+                href={`https://www.youtube.com/playlist?list=${process.env.YOUTUBE_PLAYLIST_ID}`}
                 target="blank"
                 className="flex flex-col items-center gap-2"
               >
