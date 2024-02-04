@@ -3,7 +3,7 @@ import Link from "next/link";
 import { allPosts } from ".contentlayer/generated";
 import { compareDesc } from "date-fns";
 
-import MyProfile from "../../public/my_profile.png";
+import MyProfile from "@/public/my_profile.jpeg";
 import { RiMailFill, RiGithubFill } from "react-icons/ri";
 import PostList from "@/src/components/PostList";
 
