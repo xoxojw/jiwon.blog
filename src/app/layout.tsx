@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+
+import Head from "next/head";
+
 import { ThemeProvider } from "@/src/components/ThemeProvider";
 import SWRProvider from "./SWRProvider";
 
@@ -9,9 +12,6 @@ import Footer from "@/src/components/Footer";
 export const metadata: Metadata = {
   title: "Jiwon Log",
   description: "Small steps are still progress, 공부한 것을 기록하고 보관하기 위한 기술 블로그입니다.",
-  icons: {
-    icon: "/logo/favicon.ico",
-  },
   openGraph: {
     title: "Jiwon log",
     description: "Small steps are still progress, 공부한 것을 기록하고 보관하기 위한 기술 블로그입니다.",
@@ -21,9 +21,26 @@ export const metadata: Metadata = {
   },
 };
 
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" suppressHydrationWarning>
+      <Head>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}', {
+            page_path: window.location.pathname,
+          });
+        `,
+          }}
+        />
+      </Head>
       <body className="antialiased">
         <SWRProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
