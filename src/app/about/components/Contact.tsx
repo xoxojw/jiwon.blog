@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { IoMail, IoDocumentText } from "react-icons/io5";
-import { FaGithub } from "react-icons/fa";
+import { RiGithubFill, RiNotionFill } from "react-icons/ri";
 
 export const contactLists = [
   {
@@ -12,12 +12,17 @@ export const contactLists = [
   {
     label: "GitHub",
     href: "https://github.com/xoxojw",
-    icon: <FaGithub />
+    icon: <RiGithubFill />
   },
   {
     label: "Portfolio",
     href: "https://xoxojw.notion.site/bade2269abbe4ee9a9a03df3f0d6e8fc?pvs=4",
     icon: <IoDocumentText />
+  },
+  {
+    label: "Study",
+    href: "https://xoxojw.notion.site/What-I-Learned-b63ba9e925554f168ef4cc9c387b737d?pvs=4",
+    icon: <RiNotionFill />
   }
 ]
 
