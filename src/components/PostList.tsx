@@ -24,9 +24,7 @@ const PostList = ({ index, posts }: PostListProps) => {
     <div className="flex animate-in flex-col gap-8" style={{ "--index": index ? index : 0 } as React.CSSProperties}>
       <div className="flex items-center justify-between gap-3">
         <div className="animate-in heading-first" style={{ "--index": 1 } as React.CSSProperties}>
-          {pathname === homeHref ?
-            <h2 className="heading-second">Latest Posts</h2>
-            : <h1>Posts</h1>}
+          {pathname === homeHref ? <h2 className="heading-second">Latest Posts</h2> : <h1>Posts</h1>}
         </div>
 
         {pathname === homeHref ? (
@@ -40,11 +38,15 @@ const PostList = ({ index, posts }: PostListProps) => {
         )}
       </div>
 
-      <ul className="animate-in flex flex-col gap-5" style={{ "--index": 2 } as React.CSSProperties}>
-        {posts.map((post, i) => (
-          <PostCard key={post.slug} post={post} i={i} />
-        ))}
-      </ul>
+      {posts.length === 0 ? (
+        <h3 className="text-zinc-400 dark:text-zinc-600">작성된 게시글이 없습니다.</h3>
+      ) : (
+        <ul className="animate-in flex flex-col gap-5" style={{ "--index": 2 } as React.CSSProperties}>
+          {posts.map((post, i) => (
+            <PostCard key={post.slug} post={post} i={i} />
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
