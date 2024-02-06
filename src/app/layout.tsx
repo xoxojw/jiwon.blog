@@ -15,10 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jiwon log",
     description: "Small steps are still progress, 공부한 것을 기록하고 보관하기 위한 기술 블로그입니다.",
+    images: "/og_image.png",
     url: "https://jiwon.blog",
     locale: "ko-KR",
     type: "website",
   },
+  twitter: {
+    images: "/og_twitter.png",
+  }
 };
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;

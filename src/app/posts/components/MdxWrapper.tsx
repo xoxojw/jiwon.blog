@@ -15,7 +15,7 @@ type CustomImageProps = {
 
 const CustomImage = ({ src, alt, width, height, caption }: CustomImageProps) => {
   return (
-    <figure>
+    <figure className="w-full flex justify-center">
       <Image
         src={src}
         width={width}
